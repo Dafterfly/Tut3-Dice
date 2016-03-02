@@ -17,3 +17,15 @@ int Dice::roll()
 
 }
 
+int Dice::average(int numArr[], int numOfInts)
+{
+	int sum = 0;
+
+	for (int i = 0; i < numOfInts; i++)
+	{
+		sum = +numArr[i];
+	}
+
+	return sum / numOfInts;
+}
+
