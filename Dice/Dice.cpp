@@ -29,3 +29,14 @@ int Dice::average(int numArr[], int numOfInts)
 	return sum / numOfInts;
 }
 
+int Dice::average(Dice myDice, int numOfRolls)
+{
+	int sumOfRolls = 0;
+
+	for (int i = 0; i < numOfRolls; i++)
+	{
+		sumOfRolls = myDice.roll();
+	}
+
+	return sumOfRolls / numOfRolls;
+}

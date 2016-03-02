@@ -6,5 +6,7 @@ public:
 	~Dice();
 	int roll();
 	int average(int [], int);
+	int average(Dice, int);
+
 };
 
