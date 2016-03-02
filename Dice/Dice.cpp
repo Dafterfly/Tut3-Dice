@@ -16,7 +16,6 @@ Dice::~Dice()
 
 int Dice::roll()
 {
-	srand(time(NULL));
 	return rand() % 6 + 1;
 }
 
@@ -34,7 +33,7 @@ double average(int numArr[], int numOfInts)
 
 double average(Dice myDice, int numOfRolls)
 {
-	int sumOfRolls = 0;
+	double sumOfRolls = 0;
 
 	cout << "Dice rolls: " << endl;
 
@@ -52,9 +51,11 @@ int main()
 {
 	Dice myDice;
 
-	int myArr[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
+	srand(time(NULL));
+	
 
-	cout<< average(myDice, 3)<<endl;
+	cout<<"Average of dice rolls: "<< average(myDice, 3)<<endl;
 
+int myArr[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
 	cout<<"Array average: "<<average(myArr, 8)<<endl;
 }
