@@ -1,6 +1,9 @@
 #include "Dice.h"
 #include <cmath>
 #include <cstdlib>
+#include <iostream>
+#include <ctime>
+using namespace std;
 
 Dice::Dice()
 {
@@ -13,11 +16,11 @@ Dice::~Dice()
 
 int Dice::roll()
 {
+	srand(time(NULL));
 	return rand() % 6 + 1;
-
 }
 
-double Dice::average(int numArr[], int numOfInts)
+double average(int numArr[], int numOfInts)
 {
 	int sum = 0;
 
@@ -29,7 +32,7 @@ double Dice::average(int numArr[], int numOfInts)
 	return sum / numOfInts;
 }
 
-double Dice::average(Dice myDice, int numOfRolls)
+double average(Dice myDice, int numOfRolls)
 {
 	int sumOfRolls = 0;
 
@@ -39,4 +42,12 @@ double Dice::average(Dice myDice, int numOfRolls)
 	}
 
 	return sumOfRolls / numOfRolls;
+}
+
+int main()
+{
+	Dice myDice;
+
+	cout << "Dice roll test: " << myDice.roll()<<endl;
+
 }
