@@ -17,7 +17,7 @@ int Dice::roll()
 
 }
 
-int Dice::average(int numArr[], int numOfInts)
+double Dice::average(int numArr[], int numOfInts)
 {
 	int sum = 0;
 
@@ -29,7 +29,7 @@ int Dice::average(int numArr[], int numOfInts)
 	return sum / numOfInts;
 }
 
-int Dice::average(Dice myDice, int numOfRolls)
+double Dice::average(Dice myDice, int numOfRolls)
 {
 	int sumOfRolls = 0;
 
