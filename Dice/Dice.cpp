@@ -22,11 +22,11 @@ int Dice::roll()
 
 double average(int numArr[], int numOfInts)
 {
-	int sum = 0;
+	double sum = 0;
 
 	for (int i = 0; i < numOfInts; i++)
 	{
-		sum = +numArr[i];
+		sum = sum+numArr[i];
 	}
 
 	return sum / numOfInts;
@@ -36,9 +36,13 @@ double average(Dice myDice, int numOfRolls)
 {
 	int sumOfRolls = 0;
 
-	for (int i = 0; i < numOfRolls; i++)
+	cout << "Dice rolls: " << endl;
+
+	for (int i = 1; i <= numOfRolls; i++)
 	{
-		sumOfRolls = myDice.roll();
+		int rolled = myDice.roll();
+		cout << rolled<<endl;
+		sumOfRolls += rolled;
 	}
 
 	return sumOfRolls / numOfRolls;
@@ -48,6 +52,9 @@ int main()
 {
 	Dice myDice;
 
-	cout << "Dice roll test: " << myDice.roll()<<endl;
+	int myArr[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
 
+	cout<< average(myDice, 3)<<endl;
+
+	cout<<"Array average: "<<average(myArr, 8)<<endl;
 }
