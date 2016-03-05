@@ -63,11 +63,12 @@ int main()
 {
 	Dice myDice;
 
-	// seed all calls rand() from now on to ensure a different number is generated every time it's run 
+	// seed all calls to rand() from now on to ensure a different number is generated every time it's run 
 	srand(time(NULL));
+	// ^ That line is the support system to rand().  Don't ever take it out.  Don't repeat it.    
 	
 	cout<<"Average of dice rolls: "<< average(myDice, 3)<<endl;
 
 	int myArr[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
-	cout<<"Array average: "<<average(myArr, 8)<<endl;
+	cout<<"Integer Array average: "<<average(myArr, 8)<<endl;
 }
