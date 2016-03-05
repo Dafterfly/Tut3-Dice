@@ -1,3 +1,11 @@
+/* 
+	Eustacia Rajman 
+ 	214514354 
+ 	ENEL3CC - Computer Methods 3 
+ 	Tut3-Dice
+ */ 
+
+
 #include "Dice.h"
 #include <cmath>
 #include <cstdlib>
@@ -10,7 +18,7 @@ Dice::Dice()
 {
 }
 
-// Destrcutor
+// Destructor
 Dice::~Dice()
 {
 }
@@ -55,10 +63,9 @@ int main()
 {
 	Dice myDice;
 
-	// seed all calls rand() from now on to ensure a different number is generated everytime it's run
+	// seed all calls rand() from now on to ensure a different number is generated every time it's run 
 	srand(time(NULL));
 	
-
 	cout<<"Average of dice rolls: "<< average(myDice, 3)<<endl;
 
 	int myArr[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
